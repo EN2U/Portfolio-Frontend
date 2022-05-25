@@ -3,11 +3,11 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          <span v-text="'EN2U Portfolio'"></span>
+          <q-btn flat elevated v-text="'EN2U Portfolio'" to="/"></q-btn>
         </q-toolbar-title>
         <q-tabs align="left">
-          <q-route-tab to="/" label="Trading" />
-          <q-route-tab to="/" label="Data Analyst" />
+          <q-route-tab to="/trading" label="Trading" />
+          <q-route-tab to="/data-analyst" label="Data Analyst" />
         </q-tabs>
       </q-toolbar>
     </q-header>
