@@ -1,8 +1,6 @@
 <template>
-  <q-page class="flex flex-center">
-    <div class="column">
-      <Title></Title>
-    </div>
+  <q-page>
+    <Title class="row window-height bg-primary"></Title>
   </q-page>
 </template>
 

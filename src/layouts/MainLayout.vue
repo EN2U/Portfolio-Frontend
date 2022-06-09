@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header elevated class="bg-secondary">
       <q-toolbar>
         <q-toolbar-title>
           <q-btn flat elevated v-text="'EN2U Portfolio'" to="/"></q-btn>
