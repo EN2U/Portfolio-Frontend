@@ -20,7 +20,9 @@
       </div>
     </div>
     <div class="col-12 col-md-6 text-white row justify-center items-center" style="width: 50%; height: 50%">
-      <q-skeleton style="min-width: 500px; min-height: 500px; width: 70%; height: 70%"></q-skeleton>
+      <q-skeleton style="min-width: 500px; min-height: 500px; width: 70%; height: 70%">
+        fotito mia :)
+      </q-skeleton>
     </div>
   </div>
 </template>
