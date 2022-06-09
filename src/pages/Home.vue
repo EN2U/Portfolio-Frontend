@@ -2,6 +2,7 @@
   <q-page>
     <Title class="row window-height bg-primary"></Title>
     <Description class="row window-height bg-primary"></Description>
+    <ProjectHistory class="row bg-primary"></ProjectHistory>
   </q-page>
 </template>
 
@@ -9,9 +10,10 @@
 import { defineComponent } from "vue";
 import Title from "components/Home/Title.vue";
 import Description from "components/Home/Description.vue"
+import ProjectHistory from "components/Home/ProjectHistory.vue"
 
 export default defineComponent({
   name: "Home",
-  components: { Title, Description },
+  components: { Title, Description, ProjectHistory},
 });
 </script>
