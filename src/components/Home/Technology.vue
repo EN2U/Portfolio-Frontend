@@ -16,14 +16,15 @@
     >
         <q-carousel-slide v-for="(value, index) in carouselSlides" :key="index" class="row items-center justify-center" :name="index" > 
           <div class="col-8 col-md-6 row justify-center">
-            <q-img style="max-height: 300px max-height: 300px; min-width: 150px; min-height: 150px" fit="scale-down
-" class="col-8 col-md-8" :srcset="value.img"></q-img>
+            <q-img 
+              style="max-height: 350px; max-width: 350px; min-width: 150px; min-height: 150px" fit="scale-down" 
+              class="col-8 col-md-8" 
+            :src="value.img"></q-img>
           </div>
           <div class="col-8 col-md-6 row justify-center q-pa-xl">
-            <span v-text="value.text"></span>
+            <span class="text-h6" v-text="value.text"></span>
           </div>
         </q-carousel-slide>
-
     </q-carousel>
     
   </div>
@@ -37,44 +38,48 @@ export default {
     const carouselSlides = ref([  
       {
         img: require("assets/Home/go.png"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "8 months of experience working with the language for the development of trading-oriented microservices. These range from the implementation of a backtesting module for the analysis and performance of strategies, microservices management through a subscriber publisher (NATS), portfolio management and optimisation of results through machine learning (cross validation and algorithms mentioned by Marcos de Prado). I have also implemented different encryption algorithms such as SNOW, AES or E0 bluethooth and the telegram api (tgtbot) as an alert provider."
       },
       {
         img: require("assets/Home/python.png"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "Development of a multitude of tools mainly focused on the development of APIs and the use of data analysis. These include the use of the language for higher level testing of trading strategies and the use of web scraping to obtain data (using playwright or puppeteer)."
       },
       {
         img: require("assets/Home/django.png"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "Development of a portfolio management and financial data visualisation tool, adding specific user management modules with an emphasis on system security and speed. Also for production deployments, I have worked with gunicorn as HTTP server."
       },
       {
         img: require("assets/Home/javascript.png"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "Language used for frontend-oriented development, making use of callbacks, promises, scope, etc., with a strong emphasis on functional programming language. In addition, I have used it to solve games or programming challenges such as the Advent of Code."
       },
       {
         img: require("assets/Home/node.svg"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "Making use of express for the implementation of a rest api following a MEVN scheme. Implementing a model view controller (mvc) for an e-commerce platform along with data and information visualisation."
       },
       {
         img: require("assets/Home/vue.png"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "Web framework with which I have been working the longest (about 1-2 years). I have worked on social network simulation, e-commerce platforms, user management tools and financial monitoring."
       },
       {
         img: require("assets/Home/quasar.png"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "Quasar is a tool for the development of web platforms for vue. Working with it since 1 year ago for most of the projects I have done as a web developer doing data analysis presentation projects, using as backend Django and Micronaut."
       },
       {
-        img: require("assets/Home/mongo.png"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        img: require("assets/Home/mongodb.svg"),
+        text: "Mainly used for small and educational projects (I have worked on it exclusively for several months during my studies). Using it for MEVN applications for user management and also for data unification. "
       },
       {
         img: require("assets/Home/sql.jpg"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "Using it mainly with mariadb, mysql and sql server. Realizing a model of control and management of attendance to cinemas under the covid protocol and for financial systems with user management."
       },
       {
         img: require("assets/Home/docker.png"),
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "Infrastructure deployment in development environments, using docker networks, from trading tools to web development deployments interconnecting systems with nginx."
       },
+      {
+        img: require("assets/Home/clean_code.png"),
+        text: "In any of the developments I have done, always give importance to the development of the project following the development standards of the language and using the most appropriate methodologies.",
+      }
     ])
     return {
       carouselSlides,
