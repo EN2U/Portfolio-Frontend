@@ -3,7 +3,7 @@
     <q-header elevated class="bg-secondary">
       <q-toolbar>
         <q-toolbar-title>
-          <q-btn flat elevated v-text="'EN2U Portfolio'" to="/"></q-btn>
+          <q-btn flat elevated v-text="'Eduardo Nuez Wehbe'" to="/"></q-btn>
         </q-toolbar-title>
         <q-tabs align="left">
           <q-route-tab to="/trading" label="Trading" />
