@@ -1,5 +1,5 @@
 <template>
-  <q-page padding class="flex flex-center">
+  <q-page padding class="bg-primary">
     <span v-text="'Under construction'"></span>
   </q-page>
 </template>

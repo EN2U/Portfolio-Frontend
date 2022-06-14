@@ -4,7 +4,7 @@
     <ProjectHistory class="row q-py-xl "></ProjectHistory>
 <!--     <TechnologyCarrousel class="row window-height "></TechnologyCarrousel>
  --><Technology class="extra_top_space q-pb-sm row window-height " style="min-height:1000px"></Technology>
-    <Interest class="row window-height " style="min-height:400px"></Interest>
+    <Interest class="row window-height q-pb-md " style="min-height:900px"></Interest>
 
   </q-page>
 </template>
