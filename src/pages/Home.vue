@@ -1,10 +1,10 @@
 <template>
-  <q-page>
-    <Title class="row window-height bg-primary q-pb-xl"></Title>
-    <ProjectHistory class="row q-py-xl bg-primary"></ProjectHistory>
-<!--     <TechnologyCarrousel class="row window-height bg-primary"></TechnologyCarrousel>
- --><Technology class="extra_top_space row window-height bg-primary"></Technology>
-    <Interest class="row window-height bg-primary"></Interest>
+  <q-page class="bg-primary">
+    <Title class="row window-height  q-pb-xl"></Title>
+    <ProjectHistory class="row q-py-xl "></ProjectHistory>
+<!--     <TechnologyCarrousel class="row window-height "></TechnologyCarrousel>
+ --><Technology class="extra_top_space q-pb-sm row window-height " style="min-height:1000px"></Technology>
+    <Interest class="row window-height " style="min-height:400px"></Interest>
 
   </q-page>
 </template>

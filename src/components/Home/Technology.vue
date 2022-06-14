@@ -1,16 +1,16 @@
 <template>
   <div class="q-pa-md row justify-center ">
-    <div class="column col-8">
+    <div class="column col-12 col-md-8">
       <div class="row items-center ">
         <div class="dot_container q-mr-md"></div>
         <span  class="text-h2 col-1  text-white text-bold" v-text="'Technologies'"></span>
       </div>
-      <div class="row q-py-md">
+      <div class="row q-py-sm">
         <div v-for="(x, index) in tech" :key="index" >
           <q-btn @click="newSelection(index)" :color="x.selected ? 'white' : '' " size="xl" :icon="`img:${x.img}`" round ></q-btn>
         </div>
       </div>
-      <div class="text-h6 col-1 q-pt-xl text-white text-bold">
+      <div class="text-h6 col-1 q-pt-md text-white text-bold">
         <span v-text="techText"></span>
       </div>
     </div>
