@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh lpR fff">
     <q-header elevated class="bg-secondary">
       <q-toolbar>
         <q-toolbar-title>
@@ -11,7 +11,24 @@
         </q-tabs>
       </q-toolbar>
     </q-header>
-
+    <q-footer class="bg-secondary text-white">
+      <q-toolbar class="row items-center justify-center">
+        <div class="row items-center justify-center">
+          <div class="q-px-md">
+            <span class="q-pr-sm" v-text="'enuez@gmail.com'"></span>
+            <q-btn  href="mailto:enuez@gmail.com" icon="email" size="sm"></q-btn>
+          </div>
+          <div class="q-px-md">
+            <span class="q-pr-sm" v-text="'+34 682673406 '"></span>
+            <q-btn href="tel:+34682673406" icon="call" size="sm"></q-btn>
+          </div>
+          <div class="q-px-md">
+            <span class="q-pr-sm" v-text="'eduardo-nuez-wehbe'"></span>
+            <q-btn target="_blank" href="https://www.linkedin.com/in/eduardo-nuez-wehbe-721198224" icon="mdi-linkedin" size="sm"></q-btn>
+          </div>
+        </div>
+      </q-toolbar>
+    </q-footer>
     <q-page-container>
       <router-view />
     </q-page-container>

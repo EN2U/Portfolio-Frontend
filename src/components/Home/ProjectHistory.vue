@@ -2,7 +2,7 @@
   <div class="q-px-lg q-pb-md row justify-center text-white">
     <q-timeline class="col-8" :layout="layout" color="secondary">
       <q-timeline-entry heading>
-        <span v-text="'Projects Timeline'"></span>
+        <span class="text-bold" v-text="'Projects Timeline'"></span>
       </q-timeline-entry>
 
       <q-timeline-entry
