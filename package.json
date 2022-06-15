@@ -16,7 +16,6 @@
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "ejs": "3.1.7",
     "quasar": "^2.0.0",
     "vue": "^3.0.0",
     "vue-i18n": "^9.0.0",
@@ -31,6 +30,10 @@
     "eslint-plugin-vue": "^7.0.0",
     "eslint-webpack-plugin": "^2.4.0",
     "prettier": "^2.5.1"
+  },
+  "resolutions": {
+    "@quasar/app/ouch/ejs": "^3.1.7",
+    "@quasar/app/minimist": "^1.2.6"
   },
   "browserslist": [
     "last 10 Chrome versions",
