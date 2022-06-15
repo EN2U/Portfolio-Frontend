@@ -4,6 +4,7 @@ node_modules
 
 # Quasar core related directories
 .quasar
+vercel.json
 /dist
 
 # Cordova related directories and files
@@ -44,3 +45,4 @@ yarn-error.log*
 
 # Built Visual Studio Code Extensions
 *.vsix
+.vercel
