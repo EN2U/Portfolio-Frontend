@@ -24,7 +24,7 @@ module.exports = configure(function (ctx) {
     boot: ["i18n", "axios"],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
-    css: ["app.scss"],
+    css: ["app.sass"],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
@@ -44,7 +44,7 @@ module.exports = configure(function (ctx) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       vueRouterMode: "history", // available values: 'hash', 'history'
-
+      distDir: ctx.mode.spa ? 'public' : null,
       // transpile: false,
       // publicPath: '/',
 
@@ -76,6 +76,7 @@ module.exports = configure(function (ctx) {
       server: {
         type: "http",
       },
+      host: "0.0.0.0",
       port: 8080,
       open: true, // opens browser window automatically
     },
