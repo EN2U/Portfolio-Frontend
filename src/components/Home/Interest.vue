@@ -5,84 +5,17 @@
         <div class="dot_container q-mr-md" />
         <span  class="text-h2 col-8 col-md-6  text-white text-bold" v-text="'Focused on'" />
       </div>
-      <div class="row justify-around text-white ">
-        <div class="col-12 col-md-6 row q-py-lg justify-around items-center">
-          <span class="text-h6 col-4 ">Machine learning focused on algorithmic trading</span>
+      <div class="row justify-around text-white">
+        <div class="col-12 col-md-6 row q-py-lg justify-around items-center" v-for="(data, index) in interestData" :key="index">
+          <span class="text-h6 col-4 " v-text="data.text"></span>
           <div class="col-6 row justify-center">
             <q-rating
-              :model-value="5"
+              :model-value="data.starsValue"
               icon-half="star_half"
               size="2em"
               color="orange"
               readonly
             />
-          </div>
-        </div>
-        <div class="col-12 col-md-6 row q-py-lg justify-around items-center">
-          <span class="text-h6 col-4 ">Data analyst</span>
-          <div class="col-6 row justify-center">
-            <q-rating
-              :model-value="5"
-              icon-half="star_half"
-              size="2em"
-              color="orange"
-              readonly
-            />
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 row q-py-lg justify-around items-center">
-          <span class="text-h6 col-4 ">Full stack development</span>
-          <div class="col-6 row justify-center">
-            <q-knob
-              show-value
-              font-size="12px"
-              :model-value="80"
-              size="50px"
-              :thickness="0.22"
-              color="accent"
-              track-color="grey-3"
-              class="q-ma-md"
-            >
-              {{ 95 }}%
-            </q-knob>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 row q-py-lg justify-around items-center">
-          <span class="text-h6 col-4 ">Finances</span>
-          <div class="col-6 row justify-center">
-            <q-knob
-              show-value
-              font-size="12px"
-              :model-value="67"
-              size="50px"
-              :thickness="0.22"
-              color="accent"
-              track-color="grey-3"
-              class=""
-            >
-              {{ 67 }}%
-            </q-knob>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 row q-py-lg justify-around items-center">
-          <span class="text-h6 col-4 ">Blockchain</span>
-          <div class="col-6">
-            <q-linear-progress class="bg-white" size="20px" rounded :value="0.8" color="accent">
-              <div class="absolute-full flex flex-center">
-                <q-badge class="text-bold" color="white" text-color="accent" :label="`80%`" />
-              </div>
-            </q-linear-progress>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 row q-py-lg justify-around items-center">
-          <span class="text-h6 col-4 ">Microservices management</span>
-          <div class="col-6">
-            <q-linear-progress class="bg-white" size="20px" rounded :value="0.8" color="accent">
-              <div class="absolute-full flex flex-center">
-                <q-badge class="text-bold " color="white" text-color="accent" :label="`80%`" />
-              </div>
-            </q-linear-progress>
           </div>
         </div>
       </div>
@@ -92,12 +25,38 @@
 </template>
 
 <script>
+import { ref } from "vue"
 export default {
   name: 'Interest',
   setup () {
-
+    const interestData = ref([
+      {
+        text: "Machine learning focused on algorithmic trading",
+        starsValue: 4,
+      },
+      {
+        text: "Data analyst",
+        starsValue: 4.5,
+      },
+      {
+        text: "Full stack development",
+        starsValue: 3.5,
+      },
+      {
+        text: "Finances",
+        starsValue: 3,
+      },
+      {
+        text: "Blockchain",
+        starsValue: 2.5,
+      },
+      {
+        text: "Microservices management",
+        starsValue: 3,
+      },
+      ]) 
     return {
-
+      interestData
     }
   }
 }

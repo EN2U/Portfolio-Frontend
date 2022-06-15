@@ -3,9 +3,7 @@
     <div class="col-12 col-md-6 row justify-center items-center">
       <div class="col-12 row justify-center">
         <span class="text-h2 col-8 col-md-6 row justify-center items-center text-weight-bolder text-white q-ma-md">
-          Full Stack Developer
-          dedicated to Finance 
-          and Data Analysis
+          Full Stack Developer dedicated to Finance and Data Analysis
         </span>
         <span
           class="text-weight-bolder text-italic text-white text-h6 col-8 col-md-6 text-body1"

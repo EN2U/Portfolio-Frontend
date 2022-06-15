@@ -15,15 +15,15 @@
       <q-toolbar class="row items-center justify-center">
         <div class="row items-center justify-center">
           <div class="q-px-md">
-            <span class="q-pr-sm" v-text="'enuez@gmail.com'"></span>
+            <span class="q-pr-sm text-bold" v-text="'enuez@gmail.com'"></span>
             <q-btn  href="mailto:enuez@gmail.com" icon="email" size="sm"></q-btn>
           </div>
-<!--           <div class="q-px-md">
-            <span class="q-pr-sm" v-text="'+34 682673406 '"></span>
-            <q-btn href="tel:+34682673406" icon="call" size="sm"></q-btn>
-          </div> -->
           <div class="q-px-md">
-            <span class="q-pr-sm" v-text="'eduardo-nuez-wehbe'"></span>
+            <span class="q-pr-sm text-bold" v-text="'en2u'"></span>
+            <q-btn href="https://github.com/EN2U" icon="mdi-github" size="sm"></q-btn>
+          </div>
+          <div class="q-px-md">
+            <span class="q-pr-sm text-bold" v-text="'eduardo-nuez-wehbe'"></span>
             <q-btn target="_blank" href="https://www.linkedin.com/in/eduardo-nuez-wehbe-721198224" icon="mdi-linkedin" size="sm"></q-btn>
           </div>
         </div>
