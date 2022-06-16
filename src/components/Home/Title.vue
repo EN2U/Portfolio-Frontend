@@ -8,11 +8,14 @@
         <span
           class="text-weight-bolder text-italic text-white text-h6 col-8 col-md-6 text-body1"
         >
-          I am Eduardo Nuez Wehbe, a Full Stack Developer who loves Data Analysis in the Financial sectors for Algorithmic Trading.  
+          I am Eduardo Nuez Wehbe, a Full Stack Developer who loves Data Analysis in the Financial sectors for Algorithmic Trading.
         </span>
       </div>
     </div>
-    <div class="col-12 col-md-6 text-white row justify-center items-center" style="width: 50%; height: 50%">
+    <div
+      class="col-12 col-md-6 text-white row justify-center items-center"
+      style="width: 50%; height: 50%"
+    >
       <q-skeleton style="min-width: 250px; min-height: 250px; width: 70%; height: 70%">
         fotito mia :)
       </q-skeleton>
@@ -22,9 +25,9 @@
 
 <script>
 export default {
-  name: "Title",
-  setup() {
-    return {};
-  },
-};
+  name: 'Title',
+  setup () {
+    return {}
+  }
+}
 </script>
