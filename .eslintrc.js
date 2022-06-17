@@ -56,7 +56,6 @@ module.exports = {
   rules: {
     'generator-star-spacing': 'off',
     // allow paren-less arrow functions
-    "max-len": [1, 80, 4, {"ignoreUrls": true}],
     'arrow-parens': 'off',
     'one-var': 'off',
     'no-void': 'off',

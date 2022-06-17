@@ -1,19 +1,24 @@
 <template>
   <q-page
     padding
-    class="bg-primary"
+    class="bg-primary column"
   >
-    <span v-text="'Under construction'" />
-    <q-select
-      v-model="selectedMarket"
-      :options="marketOptions"
-    />
-    <VueApexCharts
-      class=""
-      style="width: 1000px; "
-      :series="marketCandles"
-      :options="chartOptions"
-    />
+    <div class="col-4 row items-center justify-center text-white q-pb-md">
+      <q-select
+        v-model="selectedMarket"
+        class="text-white col-3"
+        style="text-color: white !important"
+        :options="marketOptions"
+      />
+    </div>
+    <div class="col-9 row items-center justify-center">
+      <VueApexCharts
+        style="width: 1000px"
+        class=""
+        :series="marketCandles"
+        :options="chartOptions"
+      />
+    </div>
   </q-page>
 </template>
 
@@ -38,19 +43,28 @@ export default {
     const chartOptions =
           {
             chart: {
-              type: 'candlestick',
-              height: 350
+              type: 'candlestick'
             },
             title: {
               text: 'CandleStick Chart',
-              align: 'left'
+              align: 'left',
+              style: {
+                color: 'white'
+              }
             },
             xaxis: {
-              type: 'datetime'
+              type: 'datetime',
+              labels: {
+                style: {
+                  colors: '#fff'
+                }
+              }
             },
             yaxis: {
-              tooltip: {
-                enabled: true
+              labels: {
+                style: {
+                  colors: '#fff'
+                }
               }
             }
           }
