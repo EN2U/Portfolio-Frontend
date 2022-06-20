@@ -4,7 +4,14 @@
     class="bg-primary column"
   >
     <Introduction class="row window-height" />
-    <Twap class="row window-height" />
+    <Suspense>
+      <template #default>
+        <Twap class="row window-height" />
+      </template>
+      <template #fallback>
+        <span>Loading...</span>
+      </template>
+    </Suspense>
   </q-page>
 </template>
 
