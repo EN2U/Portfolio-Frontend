@@ -1,7 +1,7 @@
 <template>
   <div class="column full-width ">
     <div class="col-2 row justify-center">
-      <div class="col-2">
+      <div class="col-10 col-md-2">
         <q-select
           v-model="selectedMarket"
           filled
@@ -17,17 +17,25 @@
 </template>
 
 <script>
-import PublicMarketCandles from 'src/js/Trading'
-import { ref } from 'vue'
+import { useModelWrapper } from 'src/js/ModdleWrapper'
+
 export default {
   name: 'MarketConf',
-  async setup () {
-    const marketOptions = await PublicMarketCandles.markets()
-    const selectedMarket = ref(marketOptions[0])
-    console.log(marketOptions, selectedMarket.value)
+  props: {
+    modelValue: {
+      required: true,
+      type: String,
+      default: ''
+    },
+    marketOptions: {
+      required: true,
+      type: Array,
+      default: null
+    }
+  },
+  setup (props, { emit }) {
     return {
-      marketOptions,
-      selectedMarket
+      selectedMarket: useModelWrapper(props, emit, 'modelValue')
     }
   }
 }

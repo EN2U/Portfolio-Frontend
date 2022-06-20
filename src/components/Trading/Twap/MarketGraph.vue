@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div
+    v-if="marketCandles"
+    class=""
+  >
     <VueApexCharts
-      style="width: 1000px"
       :series="marketCandles"
       :options="chartOptions"
     />
@@ -9,12 +11,17 @@
 </template>
 
 <script>
-import PublicMarketCandles from 'src/js/Trading.js'
 
 export default {
   name: 'MarketGraph',
+  props: {
+    marketCandles: {
+      required: true,
+      type: Object,
+      default: null
+    }
+  },
   async setup () {
-    const marketCandles = await PublicMarketCandles.marketCandles()
     const chartOptions = {
       chart: {
         type: 'candlestick'
@@ -43,9 +50,13 @@ export default {
       }
     }
     return {
-      marketCandles,
       chartOptions
     }
   }
 }
 </script>
+
+<style lang="sass" scoped>
+#marketChart
+  max-width: 1400px
+</style>
