@@ -8,6 +8,7 @@
       <MarketGraph
         class=" col-12 col-md-6"
         :market-candles="marketCandles"
+        :title="selectedMarket"
       />
     </div>
   </div>

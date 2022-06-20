@@ -1,7 +1,6 @@
 <template>
   <div
     v-if="marketCandles"
-    class=""
   >
     <VueApexCharts
       :series="marketCandles"
@@ -19,15 +18,20 @@ export default {
       required: true,
       type: Object,
       default: null
+    },
+    title: {
+      required: true,
+      type: String,
+      default: ''
     }
   },
-  async setup () {
+  async setup (props) {
     const chartOptions = {
       chart: {
         type: 'candlestick'
       },
       title: {
-        text: 'CandleStick Chart',
+        text: props.title,
         align: 'left',
         style: {
           color: 'white'
