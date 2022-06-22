@@ -59,8 +59,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-#marketChart
-  max-width: 1400px
-</style>
