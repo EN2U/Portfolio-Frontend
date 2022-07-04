@@ -16,13 +16,17 @@
         </q-toolbar-title>
         <q-tabs align="left">
           <q-route-tab
+            to="/about"
+            label="About"
+          />
+          <!--           <q-route-tab
             to="/trading"
             label="Trading"
           />
           <q-route-tab
             to="/data-analyst"
             label="Data Analyst"
-          />
+          /> -->
         </q-tabs>
       </q-toolbar>
     </q-header>

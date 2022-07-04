@@ -8,6 +8,10 @@ const routes = [
         component: () => import('pages/Home.vue')
       },
       {
+        path: 'about',
+        component: () => import('pages/About.vue')
+      }
+      /*       {
         path: 'trading',
         name: 'trading',
         component: () => import('pages/Trading.vue')
@@ -16,7 +20,7 @@ const routes = [
         path: 'data-analyst',
         name: 'dataAnalyst',
         component: () => import('pages/DataAnalyst')
-      }
+      } */
     ]
   },
 
