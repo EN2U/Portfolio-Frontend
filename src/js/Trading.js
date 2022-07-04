@@ -1,5 +1,5 @@
 import { api } from 'src/boot/axios'
-
+import moment from 'moment'
 /**
  * @class PublicMarketCandles
  */
@@ -19,9 +19,9 @@ export default class PublicMarketCandles {
    * endISO: Ending point for the candles.
    * limit: Max number of candles (max 100)
   */
-  static marketCandles = (
-    market = 'BTC-USD', resolution = '1DAY', fromISO, toISO, limit = 100) => {
-    return api.get(`candles/${market}?resolution=${resolution}`).then(response => [{
+  static marketCandles = ({ market = 'BTC-USD', resolution = '1DAY', fromISO = moment().subtract(100, 'd').toISOString(), toISO = moment().toISOString(), limit = 100 }) => {
+    const petition = `candles/${market}?resolution=${resolution}&fromISO=${fromISO}&toISO=${toISO}`
+    return api.get(petition).then(response => [{
       data: response.data.candles.map(candles => {
         return {
           x: new Date(candles.startedAt),

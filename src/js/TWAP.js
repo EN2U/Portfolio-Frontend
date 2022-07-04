@@ -1,5 +1,5 @@
 import TradingExecutionOrders from './TradingExecutonOrder'
-
+import moment from 'moment'
 /**
  * Class representing TWAP order execution
  * @extends TradingExecutionOrders
@@ -11,11 +11,20 @@ export default class TWAP extends TradingExecutionOrders {
     this.shares = shares
   }
 
-  dailyAverage (params) {
-
+  async candlestickAverage (maxRange) {
+    const candlesticks = await this.candlesRange(moment().subtract(maxRange, 'd').toISOString(), moment().toISOString())
+    return candlesticks.map(value => {
+      return {
+        x: value.x,
+        y: value.y.reduce((a, b) => {
+          return parseFloat(a) + parseFloat(b)
+        }) / 4
+      }
+    })
   }
 
-  mounthlyAverage () {
-
+  async candlestickOrderCalc () {
+    const candlestickAverage = await this.candlestickAverage(this.candlesAmmount)
+    return candlestickAverage
   }
 }
