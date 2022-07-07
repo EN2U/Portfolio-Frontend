@@ -4,15 +4,16 @@
     class="bg-primary row justify-center items-center"
   >
     <div class="row full-width full-height justify-center items-center">
-      <div class="row card-size bg-primary justify-between items-center">
-        <div class="col-lg-5 col-12 q-ma-sm  row items-center justify-center">
+      <div class="row card-size bg-primary justify-center items-center">
+        <!--         <div class="col-lg-5 col-12 q-ma-sm  row items-center justify-center">
           <q-skeleton
+            v-if="false"
             class="col-lg-8 col-7"
             style="min-width: 300px; min-height: 400px; "
           >
             fotito mia :)
           </q-skeleton>
-        </div>
+        </div> -->
         <div class="col-lg-6 col-12 q-ma-sm row justify-center items-center">
           <span
             :class="layout"
